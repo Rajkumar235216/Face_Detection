@@ -1,0 +1,24 @@
+import random
+def main() :
+    number=random.randint(1,100)
+    guess=input("Guess the number between 1 and 100  :  ")
+    num_guess=0
+    guess_number=False
+    while not guess_number :
+       
+        if 1<=int(guess)<=100 :
+            num_guess +=1
+            guess=int(guess)
+            if guess<number :
+                guess=input("Input is too low. Try again :  ")
+            elif guess>number :
+                guess=input("Input is too high. Try again :  ")
+            else :
+                print " After %s Number of Guesses , You Guessed it right!" % num_guess
+                guess_number=True
+        else :
+            guess=input("Wrong Input. Guess the number between 1 and 100 please  :  ")
+            continue       
+     
+
+main()
